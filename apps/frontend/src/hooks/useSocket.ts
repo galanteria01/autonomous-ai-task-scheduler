@@ -15,16 +15,20 @@ function getSocket(): Socket {
 export function useTaskSocket(handlers: {
   onCreated?: (task: Task) => void;
   onUpdated?: (task: Task) => void;
+  onDeleted?: (payload: { id: string }) => void;
 }) {
   useEffect(() => {
     const s = getSocket();
     const created = (t: Task) => handlers.onCreated?.(t);
     const updated = (t: Task) => handlers.onUpdated?.(t);
+    const deleted = (p: { id: string }) => handlers.onDeleted?.(p);
     s.on(SOCKET_EVENTS.TASK_CREATED, created);
     s.on(SOCKET_EVENTS.TASK_UPDATED, updated);
+    s.on(SOCKET_EVENTS.TASK_DELETED, deleted);
     return () => {
       s.off(SOCKET_EVENTS.TASK_CREATED, created);
       s.off(SOCKET_EVENTS.TASK_UPDATED, updated);
+      s.off(SOCKET_EVENTS.TASK_DELETED, deleted);
     };
   }, [handlers]);
 }

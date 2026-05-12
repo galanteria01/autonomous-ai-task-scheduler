@@ -112,9 +112,18 @@ importers:
       '@ai-kanban/types':
         specifier: workspace:*
         version: link:../../packages/types
+      '@ai-sdk/mcp':
+        specifier: ^1.0.42
+        version: 1.0.42(zod@3.25.76)
       '@ai-sdk/openai':
         specifier: ^3.0.54
         version: 3.0.54(zod@3.25.76)
+      '@cyanheads/git-mcp-server':
+        specifier: ^2.15.1
+        version: 2.15.1
+      '@modelcontextprotocol/server-filesystem':
+        specifier: ^2026.1.14
+        version: 2026.1.14(zod@3.25.76)
       ai:
         specifier: ^6.0.169
         version: 6.0.169(zod@3.25.76)
@@ -127,6 +136,9 @@ importers:
       ioredis:
         specifier: ^5.4.1
         version: 5.10.1
+      mcp-macos:
+        specifier: ^2.1.5
+        version: 2.1.5(typescript@5.9.3)
       zod:
         specifier: ^3.25.76
         version: 3.25.76
@@ -171,6 +183,12 @@ packages:
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
 
+  '@ai-sdk/mcp@1.0.42':
+    resolution: {integrity: sha1-mlMVE5WylnW7lWL8O6IFE+rWhao=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/@ai-sdk/mcp/-/mcp-1.0.42.tgz}
+    engines: {node: '>=18'}
+    peerDependencies:
+      zod: ^3.25.76 || ^4.1.8
+
   '@ai-sdk/openai@3.0.54':
     resolution: {integrity: sha1-GcOURboXXtm3tEuezq0ZZXTKUOg=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/@ai-sdk/openai/-/openai-3.0.54.tgz}
     engines: {node: '>=18'}
@@ -182,6 +200,16 @@ packages:
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
+
+  '@ai-sdk/provider-utils@4.0.27':
+    resolution: {integrity: sha1-0hg2hXaGJrzxyWi31z6iuXTaWbk=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/@ai-sdk/provider-utils/-/provider-utils-4.0.27.tgz}
+    engines: {node: '>=18'}
+    peerDependencies:
+      zod: ^3.25.76 || ^4.1.8
+
+  '@ai-sdk/provider@3.0.10':
+    resolution: {integrity: sha1-q/tndvaZlR+bisIM8dQqP8fXl1I=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/@ai-sdk/provider/-/provider-3.0.10.tgz}
+    engines: {node: '>=18'}
 
   '@ai-sdk/provider@3.0.9':
     resolution: {integrity: sha1-9/7CEMtXETgAUc7XrJO8/OOHwVI=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/@ai-sdk/provider/-/provider-3.0.9.tgz}
@@ -273,6 +301,11 @@ packages:
   '@babel/types@7.29.0':
     resolution: {integrity: sha1-n1seg4xEbnLPPNS5GBUrjGBeN8c=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/@babel/types/-/types-7.29.0.tgz}
     engines: {node: '>=6.9.0'}
+
+  '@cyanheads/git-mcp-server@2.15.1':
+    resolution: {integrity: sha1-j5y0AfTzgb6Jti8E1o8yJZAOdxs=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/@cyanheads/git-mcp-server/-/git-mcp-server-2.15.1.tgz}
+    engines: {bun: '>=1.2.0', node: '>=20.0.0'}
+    hasBin: true
 
   '@esbuild/aix-ppc64@0.21.5':
     resolution: {integrity: sha1-xxhKMmUz/N8bjuBzPiHHE7l1V18=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/@esbuild/aix-ppc64/-/aix-ppc64-0.21.5.tgz}
@@ -568,8 +601,18 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@hono/node-server@1.19.14':
+    resolution: {integrity: sha1-4w+ES8d+POe+RCqsOx9zrYtY0YE=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/@hono/node-server/-/node-server-1.19.14.tgz}
+    engines: {node: '>=18.14.1'}
+    peerDependencies:
+      hono: ^4
+
   '@ioredis/commands@1.5.1':
     resolution: {integrity: sha1-oKNEmZOxDHrrkeyw1fGiNpIpflE=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/@ioredis/commands/-/commands-1.5.1.tgz}
+
+  '@isaacs/cliui@8.0.2':
+    resolution: {integrity: sha1-s3Znt7wYHBaHgiWbq0JHT79StVA=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/@isaacs/cliui/-/cliui-8.0.2.tgz}
+    engines: {node: '>=12'}
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha1-Y0Khn0Q0dRjJPkOxrGnes8Rlah8=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/@jridgewell/gen-mapping/-/gen-mapping-0.3.13.tgz}
@@ -586,6 +629,20 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha1-2xXWeByTHzolGj2sOVAcmKYIL9A=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/@jridgewell/trace-mapping/-/trace-mapping-0.3.31.tgz}
+
+  '@modelcontextprotocol/sdk@1.29.0':
+    resolution: {integrity: sha1-eXhti1JeJp3oUKyCsfH3V/ORX0Q=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/@modelcontextprotocol/sdk/-/sdk-1.29.0.tgz}
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@cfworker/json-schema': ^4.1.1
+      zod: ^3.25 || ^4.0
+    peerDependenciesMeta:
+      '@cfworker/json-schema':
+        optional: true
+
+  '@modelcontextprotocol/server-filesystem@2026.1.14':
+    resolution: {integrity: sha1-zHun4ONKr9FTBI6KITxwMLlT1oM=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/@modelcontextprotocol/server-filesystem/-/server-filesystem-2026.1.14.tgz}
+    hasBin: true
 
   '@msgpackr-extract/msgpackr-extract-darwin-arm64@3.0.3':
     resolution: {integrity: sha1-nt7GGyLDCCAYp59tHDAond89nRE=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/@msgpackr-extract/msgpackr-extract-darwin-arm64/-/msgpackr-extract-darwin-arm64-3.0.3.tgz}
@@ -632,6 +689,13 @@ packages:
   '@opentelemetry/api@1.9.0':
     resolution: {integrity: sha1-0D66aCc9wPdQnio9XLoh6uEDef4=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/@opentelemetry/api/-/api-1.9.0.tgz}
     engines: {node: '>=8.0.0'}
+
+  '@pinojs/redact@0.4.0':
+    resolution: {integrity: sha1-w94GDdEmQNzIOFFqoqaAPMey6dY=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/@pinojs/redact/-/redact-0.4.0.tgz}
+
+  '@pkgjs/parseargs@0.11.0':
+    resolution: {integrity: sha1-p36nQvqyV3UUVDTrHSMoz1ATrDM=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/@pkgjs/parseargs/-/parseargs-0.11.0.tgz}
+    engines: {node: '>=14'}
 
   '@prisma/client@5.22.0':
     resolution: {integrity: sha1-2hypwTP77+ieDaeBx14cWdpfiAI=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/@prisma/client/-/client-5.22.0.tgz}
@@ -916,11 +980,42 @@ packages:
     resolution: {integrity: sha1-C/C+EltnAUrcsLCSHmLbe//hay4=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/accepts/-/accepts-1.3.8.tgz}
     engines: {node: '>= 0.6'}
 
+  accepts@2.0.0:
+    resolution: {integrity: sha1-u89LpQdUZ/PyEx6rPP/HPC9deJU=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/accepts/-/accepts-2.0.0.tgz}
+    engines: {node: '>= 0.6'}
+
   ai@6.0.169:
     resolution: {integrity: sha1-qBxfdok2czXO+88c9IRjIeFvh50=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/ai/-/ai-6.0.169.tgz}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
+
+  ajv-formats@3.0.1:
+    resolution: {integrity: sha1-PV3HYryhdnnDwup+kK1rdTIwlXg=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/ajv-formats/-/ajv-formats-3.0.1.tgz}
+    peerDependencies:
+      ajv: ^8.0.0
+    peerDependenciesMeta:
+      ajv:
+        optional: true
+
+  ajv@8.20.0:
+    resolution: {integrity: sha1-MEs2Nq3Yi6fZNnYN1Q7OAG3qlfk=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/ajv/-/ajv-8.20.0.tgz}
+
+  ansi-regex@5.0.1:
+    resolution: {integrity: sha1-CCyyyJyf6GWaMRpTvWpNxTAdswQ=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/ansi-regex/-/ansi-regex-5.0.1.tgz}
+    engines: {node: '>=8'}
+
+  ansi-regex@6.2.2:
+    resolution: {integrity: sha1-YCFu6kZNhkWXzigyAAc4oFiWUME=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/ansi-regex/-/ansi-regex-6.2.2.tgz}
+    engines: {node: '>=12'}
+
+  ansi-styles@4.3.0:
+    resolution: {integrity: sha1-7dgDYornHATIWuegkG7a00tkiTc=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/ansi-styles/-/ansi-styles-4.3.0.tgz}
+    engines: {node: '>=8'}
+
+  ansi-styles@6.2.3:
+    resolution: {integrity: sha1-wETV3MUhoHZBNHJZehrLHxA8QEE=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/ansi-styles/-/ansi-styles-6.2.3.tgz}
+    engines: {node: '>=12'}
 
   any-promise@1.3.0:
     resolution: {integrity: sha1-q8av7tzqUugJzcA3au0845Y10X8=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/any-promise/-/any-promise-1.3.0.tgz}
@@ -935,12 +1030,23 @@ packages:
   array-flatten@1.1.1:
     resolution: {integrity: sha1-ml9pkFGx5wczKPKgCJaLZOopVdI=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/array-flatten/-/array-flatten-1.1.1.tgz}
 
+  atomic-sleep@1.0.0:
+    resolution: {integrity: sha1-64W3emAfyTLP5DLFrNNkqeLJB1s=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/atomic-sleep/-/atomic-sleep-1.0.0.tgz}
+    engines: {node: '>=8.0.0'}
+
   autoprefixer@10.5.0:
     resolution: {integrity: sha1-M9h+RDQw8CCg+FMZ1v8Vk8spG+k=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/autoprefixer/-/autoprefixer-10.5.0.tgz}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
       postcss: ^8.1.0
+
+  balanced-match@1.0.2:
+    resolution: {integrity: sha1-6D46fj8wCzTLnYf2FfoMvzV2kO4=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/balanced-match/-/balanced-match-1.0.2.tgz}
+
+  balanced-match@4.0.4:
+    resolution: {integrity: sha1-v7EGYv7tgZaixi58aOF3IMJ0F5o=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/balanced-match/-/balanced-match-4.0.4.tgz}
+    engines: {node: 18 || 20 || >=22}
 
   base64id@2.0.0:
     resolution: {integrity: sha1-J3Csa8R9MSr5eov5pjQ0LgzSXLY=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/base64id/-/base64id-2.0.0.tgz}
@@ -958,6 +1064,17 @@ packages:
   body-parser@1.20.5:
     resolution: {integrity: sha1-MDyMNEI9HW+nmbx2TpPB5Nxuv2Q=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/body-parser/-/body-parser-1.20.5.tgz}
     engines: {node: '>= 0.8', npm: 1.2.8000 || >= 1.4.16}
+
+  body-parser@2.2.2:
+    resolution: {integrity: sha1-GjLNuWa+r2jeUKnfvltY+Dy4iQw=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/body-parser/-/body-parser-2.2.2.tgz}
+    engines: {node: '>=18'}
+
+  brace-expansion@2.1.0:
+    resolution: {integrity: sha1-T0GkEZAhbuNgZ+w4FSb+lTnE8K4=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/brace-expansion/-/brace-expansion-2.1.0.tgz}
+
+  brace-expansion@5.0.6:
+    resolution: {integrity: sha1-7Gj+CmQaKdhxFXnK9kHQW64fIoU=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/brace-expansion/-/brace-expansion-5.0.6.tgz}
+    engines: {node: 18 || 20 || >=22}
 
   braces@3.0.3:
     resolution: {integrity: sha1-SQMy9AkZRSJy1VqEgK3AxEE1h4k=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/braces/-/braces-3.0.3.tgz}
@@ -999,6 +1116,16 @@ packages:
     resolution: {integrity: sha1-iN2qRpBuMDtd4w0xU7fZ/goMGaw=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/cluster-key-slot/-/cluster-key-slot-1.1.2.tgz}
     engines: {node: '>=0.10.0'}
 
+  color-convert@2.0.1:
+    resolution: {integrity: sha1-ctOmjVmMm9s68q0ehPIdiWq9TeM=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/color-convert/-/color-convert-2.0.1.tgz}
+    engines: {node: '>=7.0.0'}
+
+  color-name@1.1.4:
+    resolution: {integrity: sha1-wqCah6y95pVD3m9j+jmVyCbFNqI=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/color-name/-/color-name-1.1.4.tgz}
+
+  colorette@2.0.20:
+    resolution: {integrity: sha1-nreT5oMwZ/cjWQL807CZF6AAqVo=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/colorette/-/colorette-2.0.20.tgz}
+
   commander@4.1.1:
     resolution: {integrity: sha1-n9YCvZNilOnp70aj9NaWQESxgGg=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/commander/-/commander-4.1.1.tgz}
     engines: {node: '>= 6'}
@@ -1006,6 +1133,10 @@ packages:
   content-disposition@0.5.4:
     resolution: {integrity: sha1-i4K076yCUSoCuwsdzsnSxejrW/4=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/content-disposition/-/content-disposition-0.5.4.tgz}
     engines: {node: '>= 0.6'}
+
+  content-disposition@1.1.0:
+    resolution: {integrity: sha1-89t4nHUtRVZMx+nh4LMXkNSjjhc=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/content-disposition/-/content-disposition-1.1.0.tgz}
+    engines: {node: '>=18'}
 
   content-type@1.0.5:
     resolution: {integrity: sha1-i3cxYmVtHRCGeEyPI6VM5tc9eRg=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/content-type/-/content-type-1.0.5.tgz}
@@ -1016,6 +1147,10 @@ packages:
 
   cookie-signature@1.0.7:
     resolution: {integrity: sha1-q13Xq3V8VOYPN+9lUPSBxCbRBFQ=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/cookie-signature/-/cookie-signature-1.0.7.tgz}
+
+  cookie-signature@1.2.2:
+    resolution: {integrity: sha1-V8f8PMKTrKuf7FTXPhVpDr5KF5M=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/cookie-signature/-/cookie-signature-1.2.2.tgz}
+    engines: {node: '>=6.6.0'}
 
   cookie@0.7.2:
     resolution: {integrity: sha1-VWNpxHKiupEPKXmJG1JrNDYjftc=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/cookie/-/cookie-0.7.2.tgz}
@@ -1029,6 +1164,10 @@ packages:
     resolution: {integrity: sha1-A0BpSvPkagiUl4xvUqbbtcDxGtU=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/cron-parser/-/cron-parser-4.9.0.tgz}
     engines: {node: '>=12.0.0'}
 
+  cross-spawn@7.0.6:
+    resolution: {integrity: sha1-ilj+ePANzXDDcEUXWd+/rwPo7p8=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/cross-spawn/-/cross-spawn-7.0.6.tgz}
+    engines: {node: '>= 8'}
+
   cssesc@3.0.0:
     resolution: {integrity: sha1-N3QZGZA7hoVl4cCep0dEXNGJg+4=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/cssesc/-/cssesc-3.0.0.tgz}
     engines: {node: '>=4'}
@@ -1036,6 +1175,9 @@ packages:
 
   csstype@3.2.3:
     resolution: {integrity: sha1-7EjA8+mT5QZIyG2lWeJhCZXPmJo=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/csstype/-/csstype-3.2.3.tgz}
+
+  dateformat@4.6.3:
+    resolution: {integrity: sha1-VW+mSX5SF/7beIIUJPihwi+j9LU=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/dateformat/-/dateformat-4.6.3.tgz}
 
   debug@2.6.9:
     resolution: {integrity: sha1-XRKFFd8TT/Mn6QpMk/Tgd6U2NB8=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/debug/-/debug-2.6.9.tgz}
@@ -1073,6 +1215,10 @@ packages:
   didyoumean@1.2.2:
     resolution: {integrity: sha1-mJNG/+noObRVXs9WZu3qDT6K0Dc=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/didyoumean/-/didyoumean-1.2.2.tgz}
 
+  diff@5.2.2:
+    resolution: {integrity: sha1-CkdCeXKB0Jz6aZt56jLSdyNiO60=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/diff/-/diff-5.2.2.tgz}
+    engines: {node: '>=0.3.1'}
+
   dlv@1.1.3:
     resolution: {integrity: sha1-XBmKihFFNZbnUUlNSYdLx3MvLnk=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/dlv/-/dlv-1.1.3.tgz}
 
@@ -1084,15 +1230,27 @@ packages:
     resolution: {integrity: sha1-165mfh3INIL4tw/Q9u78UNow9Yo=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/dunder-proto/-/dunder-proto-1.0.1.tgz}
     engines: {node: '>= 0.4'}
 
+  eastasianwidth@0.2.0:
+    resolution: {integrity: sha1-aWzi7Aqg5uqTo5f/zySqeEDIJ8s=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/eastasianwidth/-/eastasianwidth-0.2.0.tgz}
+
   ee-first@1.1.1:
     resolution: {integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/ee-first/-/ee-first-1.1.1.tgz}
 
   electron-to-chromium@1.5.344:
     resolution: {integrity: sha1-ZDfMCKfZuRSpgSDhgvN3k8nq/9Q=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/electron-to-chromium/-/electron-to-chromium-1.5.344.tgz}
 
+  emoji-regex@8.0.0:
+    resolution: {integrity: sha1-6Bj9ac5cz8tARZT4QpY79TFkzDc=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/emoji-regex/-/emoji-regex-8.0.0.tgz}
+
+  emoji-regex@9.2.2:
+    resolution: {integrity: sha1-hAyIA7DYBH9P8M+WMXazLU7z7XI=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/emoji-regex/-/emoji-regex-9.2.2.tgz}
+
   encodeurl@2.0.0:
     resolution: {integrity: sha1-e46omAd9fkCdOsRUdOo46vCFelg=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/encodeurl/-/encodeurl-2.0.0.tgz}
     engines: {node: '>= 0.8'}
+
+  end-of-stream@1.4.5:
+    resolution: {integrity: sha1-c0TXEd6kDgt0q8LtSXeHQ8ztsIw=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/end-of-stream/-/end-of-stream-1.4.5.tgz}
 
   engine.io-client@6.6.4:
     resolution: {integrity: sha1-oEmYeH3TQrVD7sXURS2nu1QOf/g=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/engine.io-client/-/engine.io-client-6.6.4.tgz}
@@ -1142,13 +1300,39 @@ packages:
     resolution: {integrity: sha1-HHklA+QIBFXQBwG7H3odYHNNDlg=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/eventsource-parser/-/eventsource-parser-3.0.8.tgz}
     engines: {node: '>=18.0.0'}
 
+  eventsource@3.0.7:
+    resolution: {integrity: sha1-EVdiLi9Td7tq7yEUNycougwVaYk=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/eventsource/-/eventsource-3.0.7.tgz}
+    engines: {node: '>=18.0.0'}
+
+  express-rate-limit@8.5.1:
+    resolution: {integrity: sha1-7mJHPXs73zsnt749fyXG0TMIR5o=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/express-rate-limit/-/express-rate-limit-8.5.1.tgz}
+    engines: {node: '>= 16'}
+    peerDependencies:
+      express: '>= 4.11'
+
   express@4.22.1:
     resolution: {integrity: sha1-HeI6CXRaT//bOSR7NEu16v84IGk=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/express/-/express-4.22.1.tgz}
     engines: {node: '>= 0.10.0'}
 
+  express@5.2.1:
+    resolution: {integrity: sha1-jyHRW20yf5K0eU7PjLCKcvlWrAQ=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/express/-/express-5.2.1.tgz}
+    engines: {node: '>= 18'}
+
+  fast-copy@4.0.3:
+    resolution: {integrity: sha1-k1re+BwmJ23L6IkjR68we1CQIGo=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/fast-copy/-/fast-copy-4.0.3.tgz}
+
+  fast-deep-equal@3.1.3:
+    resolution: {integrity: sha1-On1WtVnWy8PrUSMlJE5hmmXGxSU=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz}
+
   fast-glob@3.3.3:
     resolution: {integrity: sha1-0G1YXOjbqQoWsFBcVDw8z7OuuBg=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/fast-glob/-/fast-glob-3.3.3.tgz}
     engines: {node: '>=8.6.0'}
+
+  fast-safe-stringify@2.1.1:
+    resolution: {integrity: sha1-xAaoO25w2eNc47MKgRQd8wrrqIQ=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/fast-safe-stringify/-/fast-safe-stringify-2.1.1.tgz}
+
+  fast-uri@3.1.2:
+    resolution: {integrity: sha1-ivPU/J0+cbEVcswmc7UUp9GoyOw=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/fast-uri/-/fast-uri-3.1.2.tgz}
 
   fastq@1.20.1:
     resolution: {integrity: sha1-ynUKENySW8ixiDn9ID4+9LPO1nU=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/fastq/-/fastq-1.20.1.tgz}
@@ -1170,6 +1354,14 @@ packages:
     resolution: {integrity: sha1-HrwiKPx2c6rEpHLDEMwFt32FK4g=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/finalhandler/-/finalhandler-1.3.2.tgz}
     engines: {node: '>= 0.8'}
 
+  finalhandler@2.1.1:
+    resolution: {integrity: sha1-osUXplWYUrzbBtH4vX9Rto+tgJk=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/finalhandler/-/finalhandler-2.1.1.tgz}
+    engines: {node: '>= 18.0.0'}
+
+  foreground-child@3.3.1:
+    resolution: {integrity: sha1-Mujp7Rtoo0l777msK2rfkqY4V28=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/foreground-child/-/foreground-child-3.3.1.tgz}
+    engines: {node: '>=14'}
+
   forwarded@0.2.0:
     resolution: {integrity: sha1-ImmTZCiq1MFcfr6XeahL8LKoGBE=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/forwarded/-/forwarded-0.2.0.tgz}
     engines: {node: '>= 0.6'}
@@ -1180,6 +1372,10 @@ packages:
   fresh@0.5.2:
     resolution: {integrity: sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/fresh/-/fresh-0.5.2.tgz}
     engines: {node: '>= 0.6'}
+
+  fresh@2.0.0:
+    resolution: {integrity: sha1-jdffahs6Gzpc8YbAWl3SZ2ImNaQ=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/fresh/-/fresh-2.0.0.tgz}
+    engines: {node: '>= 0.8'}
 
   fsevents@2.3.3:
     resolution: {integrity: sha1-ysZAd4XQNnWipeGlMFxpezR9kNY=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/fsevents/-/fsevents-2.3.3.tgz}
@@ -1212,6 +1408,11 @@ packages:
     resolution: {integrity: sha1-bSN9mQg5UMeSkPJMdkKj3poo+eM=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/glob-parent/-/glob-parent-6.0.2.tgz}
     engines: {node: '>=10.13.0'}
 
+  glob@10.5.0:
+    resolution: {integrity: sha1-jsA1WRnNMzjChCiiPU8k7MX+c4w=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/glob/-/glob-10.5.0.tgz}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+    hasBin: true
+
   gopd@1.2.0:
     resolution: {integrity: sha1-ifVrghe9vIgCvSmd9tfxCB1+UaE=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/gopd/-/gopd-1.2.0.tgz}
     engines: {node: '>= 0.4'}
@@ -1224,6 +1425,13 @@ packages:
     resolution: {integrity: sha1-XlwrFbYDcKTHkww4Pft2vxe8QDw=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/hasown/-/hasown-2.0.3.tgz}
     engines: {node: '>= 0.4'}
 
+  help-me@5.0.0:
+    resolution: {integrity: sha1-sevmO5Z7dAYAJ8KsYfm+EtNUpvY=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/help-me/-/help-me-5.0.0.tgz}
+
+  hono@4.12.18:
+    resolution: {integrity: sha1-9tMBk4how6i9tjlJX04yahkYFQU=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/hono/-/hono-4.12.18.tgz}
+    engines: {node: '>=16.9.0'}
+
   http-errors@2.0.1:
     resolution: {integrity: sha1-NtL2W8kJyHkAGN02+02T2myq4Gs=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/http-errors/-/http-errors-2.0.1.tgz}
     engines: {node: '>= 0.8'}
@@ -1232,12 +1440,20 @@ packages:
     resolution: {integrity: sha1-ICK0sl+93CHS9SSXSkdKr+czkIs=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/iconv-lite/-/iconv-lite-0.4.24.tgz}
     engines: {node: '>=0.10.0'}
 
+  iconv-lite@0.7.2:
+    resolution: {integrity: sha1-0L3qw/ErSDW3NZwq2JxCKk0cxy4=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/iconv-lite/-/iconv-lite-0.7.2.tgz}
+    engines: {node: '>=0.10.0'}
+
   inherits@2.0.4:
     resolution: {integrity: sha1-D6LGT5MpF8NDOg3tVTY6rjdBa3w=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/inherits/-/inherits-2.0.4.tgz}
 
   ioredis@5.10.1:
     resolution: {integrity: sha1-YIJ4HYrsjVHuSTa/gdBhBATbHj0=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/ioredis/-/ioredis-5.10.1.tgz}
     engines: {node: '>=12.22.0'}
+
+  ip-address@10.2.0:
+    resolution: {integrity: sha1-gF/BeLIMUYvUyFSLJP4wiS1/MgY=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/ip-address/-/ip-address-10.2.0.tgz}
+    engines: {node: '>= 12'}
 
   ipaddr.js@1.9.1:
     resolution: {integrity: sha1-v/OFQ+64mEglB5/zoqjmy9RngbM=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/ipaddr.js/-/ipaddr.js-1.9.1.tgz}
@@ -1255,6 +1471,10 @@ packages:
     resolution: {integrity: sha1-qIwCU1eR8C7TfHahueqXc8gz+MI=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/is-extglob/-/is-extglob-2.1.1.tgz}
     engines: {node: '>=0.10.0'}
 
+  is-fullwidth-code-point@3.0.0:
+    resolution: {integrity: sha1-8Rb4Bk/pCz94RKOJl8C3UFEmnx0=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz}
+    engines: {node: '>=8'}
+
   is-glob@4.0.3:
     resolution: {integrity: sha1-ZPYeQsu7LuwgcanawLKLoeZdUIQ=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/is-glob/-/is-glob-4.0.3.tgz}
     engines: {node: '>=0.10.0'}
@@ -1263,9 +1483,25 @@ packages:
     resolution: {integrity: sha1-dTU0W4lnNNX4DE0GxQlVUnoU8Ss=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/is-number/-/is-number-7.0.0.tgz}
     engines: {node: '>=0.12.0'}
 
+  is-promise@4.0.0:
+    resolution: {integrity: sha1-Qv+fhCBsGZHSbev1IN1cAQQt0vM=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/is-promise/-/is-promise-4.0.0.tgz}
+
+  isexe@2.0.0:
+    resolution: {integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/isexe/-/isexe-2.0.0.tgz}
+
+  jackspeak@3.4.3:
+    resolution: {integrity: sha1-iDOp2Jq0rN5hiJQr0cU7Y5DtWoo=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/jackspeak/-/jackspeak-3.4.3.tgz}
+
   jiti@1.21.7:
     resolution: {integrity: sha1-ndgQQ0JKPShFixk9ll8NGKIwC6k=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/jiti/-/jiti-1.21.7.tgz}
     hasBin: true
+
+  jose@6.2.3:
+    resolution: {integrity: sha1-CXUZetlzJRIhxlijzdxLlRolDC0=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/jose/-/jose-6.2.3.tgz}
+
+  joycon@3.1.1:
+    resolution: {integrity: sha1-vOhZbWroCPi2gWj1/GkoCZaJTwM=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/joycon/-/joycon-3.1.1.tgz}
+    engines: {node: '>=10'}
 
   js-tokens@4.0.0:
     resolution: {integrity: sha1-GSA/tZmR35jjoocFDUZHzerzJJk=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/js-tokens/-/js-tokens-4.0.0.tgz}
@@ -1274,6 +1510,12 @@ packages:
     resolution: {integrity: sha1-dNM1ojT2ftGZB/2t+sfM+dQJgl0=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/jsesc/-/jsesc-3.1.0.tgz}
     engines: {node: '>=6'}
     hasBin: true
+
+  json-schema-traverse@1.0.0:
+    resolution: {integrity: sha1-rnvLNlard6c7pcSb9lTzjmtoYOI=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz}
+
+  json-schema-typed@8.0.2:
+    resolution: {integrity: sha1-6Y7nsYmf9KGEU00fFnwojGa77/Q=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/json-schema-typed/-/json-schema-typed-8.0.2.tgz}
 
   json-schema@0.4.0:
     resolution: {integrity: sha1-995M9u+rg4666zI2R0y7paGTCrU=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/json-schema/-/json-schema-0.4.0.tgz}
@@ -1300,6 +1542,9 @@ packages:
     resolution: {integrity: sha1-ce5R+nvkyuwaY4OffmgtgTLTDK8=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/loose-envify/-/loose-envify-1.4.0.tgz}
     hasBin: true
 
+  lru-cache@10.4.3:
+    resolution: {integrity: sha1-QQ/IoXtw5ZgBPfJXwkRrfzOD8Rk=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/lru-cache/-/lru-cache-10.4.3.tgz}
+
   lru-cache@5.1.1:
     resolution: {integrity: sha1-HaJ+ZxAnGUdpXa9oSOhH8B2EuSA=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/lru-cache/-/lru-cache-5.1.1.tgz}
 
@@ -1311,12 +1556,27 @@ packages:
     resolution: {integrity: sha1-oN10voHiqlwvJ+Zc4oNgXuTit/k=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/math-intrinsics/-/math-intrinsics-1.1.0.tgz}
     engines: {node: '>= 0.4'}
 
+  mcp-macos@2.1.5:
+    resolution: {integrity: sha1-Xan6efl5+db/c724yvVBC/qJzLA=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/mcp-macos/-/mcp-macos-2.1.5.tgz}
+    engines: {node: '>=20.0.0'}
+    hasBin: true
+    peerDependencies:
+      typescript: ^5.0.0
+
   media-typer@0.3.0:
     resolution: {integrity: sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/media-typer/-/media-typer-0.3.0.tgz}
     engines: {node: '>= 0.6'}
 
+  media-typer@1.1.0:
+    resolution: {integrity: sha1-ardLjy0zIPIGSyqHo455Mf86VWE=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/media-typer/-/media-typer-1.1.0.tgz}
+    engines: {node: '>= 0.8'}
+
   merge-descriptors@1.0.3:
     resolution: {integrity: sha1-2AMZpl88eTU1Hlz9rI+TGFBNvtU=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/merge-descriptors/-/merge-descriptors-1.0.3.tgz}
+
+  merge-descriptors@2.0.0:
+    resolution: {integrity: sha1-6pIvZgY1oiSe5WXgRJ+VHmtgOAg=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/merge-descriptors/-/merge-descriptors-2.0.0.tgz}
+    engines: {node: '>=18'}
 
   merge2@1.4.1:
     resolution: {integrity: sha1-Q2iJL4hekHRVpv19xVwMnUBJkK4=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/merge2/-/merge2-1.4.1.tgz}
@@ -1334,14 +1594,37 @@ packages:
     resolution: {integrity: sha1-u6vNwChZ9JhzAchW4zh85exDv3A=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/mime-db/-/mime-db-1.52.0.tgz}
     engines: {node: '>= 0.6'}
 
+  mime-db@1.54.0:
+    resolution: {integrity: sha1-zds+5PnGRTDf9kAjZmHULLajFPU=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/mime-db/-/mime-db-1.54.0.tgz}
+    engines: {node: '>= 0.6'}
+
   mime-types@2.1.35:
     resolution: {integrity: sha1-OBqHG2KnNEUGYK497uRIE/cNlZo=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/mime-types/-/mime-types-2.1.35.tgz}
     engines: {node: '>= 0.6'}
+
+  mime-types@3.0.2:
+    resolution: {integrity: sha1-OQAtQYJXXVrwNv+hGBAPJSSy4qs=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/mime-types/-/mime-types-3.0.2.tgz}
+    engines: {node: '>=18'}
 
   mime@1.6.0:
     resolution: {integrity: sha1-Ms2eXGRVO9WNGaVor0Uqz/BJgbE=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/mime/-/mime-1.6.0.tgz}
     engines: {node: '>=4'}
     hasBin: true
+
+  minimatch@10.2.5:
+    resolution: {integrity: sha1-vUhoegvjjtKWE5kQVgD4MglYYdE=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/minimatch/-/minimatch-10.2.5.tgz}
+    engines: {node: 18 || 20 || >=22}
+
+  minimatch@9.0.9:
+    resolution: {integrity: sha1-mwy5/LeAh/b9fqur4lEcTT1gV04=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/minimatch/-/minimatch-9.0.9.tgz}
+    engines: {node: '>=16 || 14 >=14.17'}
+
+  minimist@1.2.8:
+    resolution: {integrity: sha1-waRk52kzAuCCoHXO4MBXdBrEdyw=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/minimist/-/minimist-1.2.8.tgz}
+
+  minipass@7.1.3:
+    resolution: {integrity: sha1-eTibTrG7LQA6m7qH1JLyvTe9xls=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/minipass/-/minipass-7.1.3.tgz}
+    engines: {node: '>=16 || 14 >=14.17'}
 
   ms@2.0.0:
     resolution: {integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/ms/-/ms-2.0.0.tgz}
@@ -1366,6 +1649,10 @@ packages:
 
   negotiator@0.6.3:
     resolution: {integrity: sha1-WOMjpy/twNb5zU0x/kn1FHlZDM0=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/negotiator/-/negotiator-0.6.3.tgz}
+    engines: {node: '>= 0.6'}
+
+  negotiator@1.0.0:
+    resolution: {integrity: sha1-tskbtHFy1p+Tz9fDV7u1KQGbX2o=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/negotiator/-/negotiator-1.0.0.tgz}
     engines: {node: '>= 0.6'}
 
   node-abort-controller@3.1.1:
@@ -1394,19 +1681,40 @@ packages:
     resolution: {integrity: sha1-g3UmXiG8IND6WCwi4bE0hdbgAhM=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/object-inspect/-/object-inspect-1.13.4.tgz}
     engines: {node: '>= 0.4'}
 
+  on-exit-leak-free@2.1.2:
+    resolution: {integrity: sha1-/tGVyevdt9nkw4Qvk/KBrI2t07g=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/on-exit-leak-free/-/on-exit-leak-free-2.1.2.tgz}
+    engines: {node: '>=14.0.0'}
+
   on-finished@2.4.1:
     resolution: {integrity: sha1-WMjEQRblSEWtV/FKsQsDUzGErD8=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/on-finished/-/on-finished-2.4.1.tgz}
     engines: {node: '>= 0.8'}
+
+  once@1.4.0:
+    resolution: {integrity: sha1-WDsap3WWHUsROsF9nFC6753Xa9E=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/once/-/once-1.4.0.tgz}
+
+  package-json-from-dist@1.0.1:
+    resolution: {integrity: sha1-TxRxoBCCeob5TP2bByfjbSZ95QU=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/package-json-from-dist/-/package-json-from-dist-1.0.1.tgz}
 
   parseurl@1.3.3:
     resolution: {integrity: sha1-naGee+6NEt/wUT7Vt2lXeTvC6NQ=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/parseurl/-/parseurl-1.3.3.tgz}
     engines: {node: '>= 0.8'}
 
+  path-key@3.1.1:
+    resolution: {integrity: sha1-WB9q3mWMu6ZaDTOA3ndTKVBU83U=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/path-key/-/path-key-3.1.1.tgz}
+    engines: {node: '>=8'}
+
   path-parse@1.0.7:
     resolution: {integrity: sha1-+8EUtgykKzDZ2vWFjkvWi77bZzU=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/path-parse/-/path-parse-1.0.7.tgz}
 
+  path-scurry@1.11.1:
+    resolution: {integrity: sha1-eWCmaIiFlKByCxKpEdGnQqufEdI=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/path-scurry/-/path-scurry-1.11.1.tgz}
+    engines: {node: '>=16 || 14 >=14.18'}
+
   path-to-regexp@0.1.13:
     resolution: {integrity: sha1-myLsFrw6uI0FoMfjaYaUIUAasX0=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/path-to-regexp/-/path-to-regexp-0.1.13.tgz}
+
+  path-to-regexp@8.4.2:
+    resolution: {integrity: sha1-eVxCDE98pFxbiHNm9iLuDJhSzM0=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/path-to-regexp/-/path-to-regexp-8.4.2.tgz}
 
   picocolors@1.1.1:
     resolution: {integrity: sha1-PTIa8+q5ObCDyPkpodEs2oHCa2s=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/picocolors/-/picocolors-1.1.1.tgz}
@@ -1423,9 +1731,27 @@ packages:
     resolution: {integrity: sha1-7RQaasBDqEnqWISY59yosVMw6Qw=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/pify/-/pify-2.3.0.tgz}
     engines: {node: '>=0.10.0'}
 
+  pino-abstract-transport@3.0.0:
+    resolution: {integrity: sha1-sh5fM6KX6MTJFcYrPOXdSoelLCM=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/pino-abstract-transport/-/pino-abstract-transport-3.0.0.tgz}
+
+  pino-pretty@13.1.3:
+    resolution: {integrity: sha1-InTMzakl3TVcEEB5pQKfZZjQOBs=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/pino-pretty/-/pino-pretty-13.1.3.tgz}
+    hasBin: true
+
+  pino-std-serializers@7.1.0:
+    resolution: {integrity: sha1-p7DNZSJfKeklQOeFO9c7B0eYk/w=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/pino-std-serializers/-/pino-std-serializers-7.1.0.tgz}
+
+  pino@10.3.1:
+    resolution: {integrity: sha1-ZVLI+NhIGETJ5FLnvwvpC/8ZOc4=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/pino/-/pino-10.3.1.tgz}
+    hasBin: true
+
   pirates@4.0.7:
     resolution: {integrity: sha1-ZDtKGMQlfIplEEtz8wSc6aChXiI=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/pirates/-/pirates-4.0.7.tgz}
     engines: {node: '>= 6'}
+
+  pkce-challenge@5.0.1:
+    resolution: {integrity: sha1-O0RGhlsXsXRems4gFqMfSN32Iw0=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/pkce-challenge/-/pkce-challenge-5.0.1.tgz}
+    engines: {node: '>=16.20.0'}
 
   postcss-import@15.1.0:
     resolution: {integrity: sha1-QcZO2MwOI3NalpizJJ/9v3BK3HA=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/postcss-import/-/postcss-import-15.1.0.tgz}
@@ -1479,9 +1805,15 @@ packages:
     engines: {node: '>=16.13'}
     hasBin: true
 
+  process-warning@5.0.0:
+    resolution: {integrity: sha1-Vm4L950d/zCnLYu76ejs7+jTeNc=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/process-warning/-/process-warning-5.0.0.tgz}
+
   proxy-addr@2.0.7:
     resolution: {integrity: sha1-8Z/mnOqzEe65S0LnDowgcPm6ECU=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/proxy-addr/-/proxy-addr-2.0.7.tgz}
     engines: {node: '>= 0.10'}
+
+  pump@3.0.4:
+    resolution: {integrity: sha1-HzE0MFJ/qLkFYi69Iv4UROdXqzw=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/pump/-/pump-3.0.4.tgz}
 
   qs@6.14.2:
     resolution: {integrity: sha1-tWNM+dmtmJjjH7o1BOhm6O+2eYw=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/qs/-/qs-6.14.2.tgz}
@@ -1494,6 +1826,9 @@ packages:
   queue-microtask@1.2.3:
     resolution: {integrity: sha1-SSkii7xyTfrEPg77BYyve2z7YkM=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/queue-microtask/-/queue-microtask-1.2.3.tgz}
 
+  quick-format-unescaped@4.0.4:
+    resolution: {integrity: sha1-k+9t2NNFPLx5cN1hT61MWVTWtac=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/quick-format-unescaped/-/quick-format-unescaped-4.0.4.tgz}
+
   range-parser@1.2.1:
     resolution: {integrity: sha1-PPNwI9GZ4cJNGlW4SADC8+ZGgDE=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/range-parser/-/range-parser-1.2.1.tgz}
     engines: {node: '>= 0.6'}
@@ -1501,6 +1836,10 @@ packages:
   raw-body@2.5.3:
     resolution: {integrity: sha1-EcZlDudwp94bSU8ZeSfeDJI4IuI=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/raw-body/-/raw-body-2.5.3.tgz}
     engines: {node: '>= 0.8'}
+
+  raw-body@3.0.2:
+    resolution: {integrity: sha1-PjraWuVWj5CV2EN2/TpJuPsAClE=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/raw-body/-/raw-body-3.0.2.tgz}
+    engines: {node: '>= 0.10'}
 
   react-dom@18.3.1:
     resolution: {integrity: sha1-wiZdeVEbV9R5s90/36UVNklMXLQ=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/react-dom/-/react-dom-18.3.1.tgz}
@@ -1522,6 +1861,13 @@ packages:
     resolution: {integrity: sha1-dKNwvYVxFuJFspzJc0DNQxoCpsc=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/readdirp/-/readdirp-3.6.0.tgz}
     engines: {node: '>=8.10.0'}
 
+  real-require@0.2.0:
+    resolution: {integrity: sha1-IJYy3qGBC+KuBjpqwIT+5+M/ung=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/real-require/-/real-require-0.2.0.tgz}
+    engines: {node: '>= 12.13.0'}
+
+  real-require@1.0.0:
+    resolution: {integrity: sha1-5PCjc36AYMUTtgwmUsWLjvVryKk=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/real-require/-/real-require-1.0.0.tgz}
+
   redis-errors@1.2.0:
     resolution: {integrity: sha1-62LSrbFeTq9GEMBK/hUpOEJQq60=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/redis-errors/-/redis-errors-1.2.0.tgz}
     engines: {node: '>=4'}
@@ -1529,6 +1875,10 @@ packages:
   redis-parser@3.0.0:
     resolution: {integrity: sha1-tm2CjNyv5rS4pCin3vTGvKwxyLQ=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/redis-parser/-/redis-parser-3.0.0.tgz}
     engines: {node: '>=4'}
+
+  require-from-string@2.0.2:
+    resolution: {integrity: sha1-iaf92TgmEmcxjq/hT5wy5ZjDaQk=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/require-from-string/-/require-from-string-2.0.2.tgz}
+    engines: {node: '>=0.10.0'}
 
   resolve-pkg-maps@1.0.0:
     resolution: {integrity: sha1-YWs9wsVwVrVYjDHN9LPWTbEzcg8=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/resolve-pkg-maps/-/resolve-pkg-maps-1.0.0.tgz}
@@ -1547,17 +1897,28 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
+  router@2.2.0:
+    resolution: {integrity: sha1-AZvmILcRyHZBFnzHm5kJDwCxRu8=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/router/-/router-2.2.0.tgz}
+    engines: {node: '>= 18'}
+
   run-parallel@1.2.0:
     resolution: {integrity: sha1-ZtE2jae9+SHrnZW9GpIp5/IaQ+4=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/run-parallel/-/run-parallel-1.2.0.tgz}
 
   safe-buffer@5.2.1:
     resolution: {integrity: sha1-Hq+fqb2x/dTsdfWPnNtOa3gn7sY=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/safe-buffer/-/safe-buffer-5.2.1.tgz}
 
+  safe-stable-stringify@2.5.0:
+    resolution: {integrity: sha1-TKL444XygxxDKnGbEIo7969Cod0=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/safe-stable-stringify/-/safe-stable-stringify-2.5.0.tgz}
+    engines: {node: '>=10'}
+
   safer-buffer@2.1.2:
     resolution: {integrity: sha1-RPoWGwGHuVSd2Eu5GAL5vYOFzWo=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/safer-buffer/-/safer-buffer-2.1.2.tgz}
 
   scheduler@0.23.2:
     resolution: {integrity: sha1-QUumSjsoKJLpRM8hCOzAeNEVzcM=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/scheduler/-/scheduler-0.23.2.tgz}
+
+  secure-json-parse@4.1.0:
+    resolution: {integrity: sha1-Txq0HGehNJfqG5Exu0GDoihlR3w=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/secure-json-parse/-/secure-json-parse-4.1.0.tgz}
 
   semver@6.3.1:
     resolution: {integrity: sha1-VW0u+GiRRuRtzqS/3QlfNDTf/LQ=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/semver/-/semver-6.3.1.tgz}
@@ -1572,12 +1933,28 @@ packages:
     resolution: {integrity: sha1-WbwNobTqetQnNv1kKxxClOEU/yk=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/send/-/send-0.19.2.tgz}
     engines: {node: '>= 0.8.0'}
 
+  send@1.2.1:
+    resolution: {integrity: sha1-nqt0O4dPNVD0CiaGe/KGrWDT8+0=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/send/-/send-1.2.1.tgz}
+    engines: {node: '>= 18'}
+
   serve-static@1.16.3:
     resolution: {integrity: sha1-qXt02VV3hYPzhipPC4QetNXXjPk=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/serve-static/-/serve-static-1.16.3.tgz}
     engines: {node: '>= 0.8.0'}
 
+  serve-static@2.2.1:
+    resolution: {integrity: sha1-fxhqSk5fW2Y616QpT/G/N88OmKk=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/serve-static/-/serve-static-2.2.1.tgz}
+    engines: {node: '>= 18'}
+
   setprototypeof@1.2.0:
     resolution: {integrity: sha1-ZsmiSnP5/CjL5msJ/tPTPcrxtCQ=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/setprototypeof/-/setprototypeof-1.2.0.tgz}
+
+  shebang-command@2.0.0:
+    resolution: {integrity: sha1-zNCvT4g1+9wmW4JGGq8MNmY/NOo=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/shebang-command/-/shebang-command-2.0.0.tgz}
+    engines: {node: '>=8'}
+
+  shebang-regex@3.0.0:
+    resolution: {integrity: sha1-rhbxZE2HPsrYQ7AwexQzYtTEIXI=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/shebang-regex/-/shebang-regex-3.0.0.tgz}
+    engines: {node: '>=8'}
 
   side-channel-list@1.0.1:
     resolution: {integrity: sha1-wuC1oUpUCuvuO7xsP4ZmzJtQkSc=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/side-channel-list/-/side-channel-list-1.0.1.tgz}
@@ -1595,6 +1972,10 @@ packages:
     resolution: {integrity: sha1-w/z/nE2pMnhIczNeyXZfqU/2a8k=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/side-channel/-/side-channel-1.1.0.tgz}
     engines: {node: '>= 0.4'}
 
+  signal-exit@4.1.0:
+    resolution: {integrity: sha1-lSGIwcvVRgcOLdIND0HArgUwywQ=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/signal-exit/-/signal-exit-4.1.0.tgz}
+    engines: {node: '>=14'}
+
   socket.io-adapter@2.5.6:
     resolution: {integrity: sha1-xpf2CdNqZ2pGdJeCJ0YH2N9Swdg=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/socket.io-adapter/-/socket.io-adapter-2.5.6.tgz}
 
@@ -1610,9 +1991,16 @@ packages:
     resolution: {integrity: sha1-ymuhQxxpUy4eCm9Jbe6+tgHbxN8=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/socket.io/-/socket.io-4.8.3.tgz}
     engines: {node: '>=10.2.0'}
 
+  sonic-boom@4.2.1:
+    resolution: {integrity: sha1-KFmCUN9ImcCsVy1+LwRgaQumoDA=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/sonic-boom/-/sonic-boom-4.2.1.tgz}
+
   source-map-js@1.2.1:
     resolution: {integrity: sha1-HOVlD93YerwJnto33P8CTCZnrkY=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/source-map-js/-/source-map-js-1.2.1.tgz}
     engines: {node: '>=0.10.0'}
+
+  split2@4.2.0:
+    resolution: {integrity: sha1-ycWSCQTRSLqwufZxRfJFqGqtv6Q=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/split2/-/split2-4.2.0.tgz}
+    engines: {node: '>= 10.x'}
 
   standard-as-callback@2.1.0:
     resolution: {integrity: sha1-iVP8BTWYaKd7W5c5pmXFl3u330U=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/standard-as-callback/-/standard-as-callback-2.1.0.tgz}
@@ -1620,6 +2008,26 @@ packages:
   statuses@2.0.2:
     resolution: {integrity: sha1-j3XuzvdlteHPzcCA2llAntQk44I=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/statuses/-/statuses-2.0.2.tgz}
     engines: {node: '>= 0.8'}
+
+  string-width@4.2.3:
+    resolution: {integrity: sha1-JpxxF9J7Ba0uU2gwqOyJXvnG0BA=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/string-width/-/string-width-4.2.3.tgz}
+    engines: {node: '>=8'}
+
+  string-width@5.1.2:
+    resolution: {integrity: sha1-FPja7G2B5yIdKjV+Zoyrc728p5Q=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/string-width/-/string-width-5.1.2.tgz}
+    engines: {node: '>=12'}
+
+  strip-ansi@6.0.1:
+    resolution: {integrity: sha1-nibGPTD1NEPpSJSVshBdN7Z6hdk=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/strip-ansi/-/strip-ansi-6.0.1.tgz}
+    engines: {node: '>=8'}
+
+  strip-ansi@7.2.0:
+    resolution: {integrity: sha1-0iomlSKDamJ6+NBLXD/Sx/o+MuM=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/strip-ansi/-/strip-ansi-7.2.0.tgz}
+    engines: {node: '>=12'}
+
+  strip-json-comments@5.0.3:
+    resolution: {integrity: sha1-tzBCSd1ALuZ/1RitqZOrNZNFi88=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/strip-json-comments/-/strip-json-comments-5.0.3.tgz}
+    engines: {node: '>=14.16'}
 
   sucrase@3.35.1:
     resolution: {integrity: sha1-RhnqUDk/6L0K5QccJqvZsuNGv+E=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/sucrase/-/sucrase-3.35.1.tgz}
@@ -1641,6 +2049,10 @@ packages:
 
   thenify@3.3.1:
     resolution: {integrity: sha1-iTLmhqQGYDigFt2eLKRq3Zg4qV8=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/thenify/-/thenify-3.3.1.tgz}
+
+  thread-stream@4.1.0:
+    resolution: {integrity: sha1-pfvyy2nPKX/bh9FBFjcLfndTJFE=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/thread-stream/-/thread-stream-4.1.0.tgz}
+    engines: {node: '>=20'}
 
   tinyglobby@0.2.16:
     resolution: {integrity: sha1-HDt+uVP85Csia8Wh7gZCgoGv89Y=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/tinyglobby/-/tinyglobby-0.2.16.tgz}
@@ -1671,6 +2083,10 @@ packages:
 
   type-is@1.6.18:
     resolution: {integrity: sha1-TlUs0F3wlGfcvE73Od6J8s83wTE=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/type-is/-/type-is-1.6.18.tgz}
+    engines: {node: '>= 0.6'}
+
+  type-is@2.0.1:
+    resolution: {integrity: sha1-ZPbPA/kvzkAVwrIkeT9r3UsGjJc=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/type-is/-/type-is-2.0.1.tgz}
     engines: {node: '>= 0.6'}
 
   typescript@5.9.3:
@@ -1733,6 +2149,22 @@ packages:
       terser:
         optional: true
 
+  which@2.0.2:
+    resolution: {integrity: sha1-fGqN0KY2oDJ+ELWckobu6T8/UbE=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/which/-/which-2.0.2.tgz}
+    engines: {node: '>= 8'}
+    hasBin: true
+
+  wrap-ansi@7.0.0:
+    resolution: {integrity: sha1-Z+FFz/UQpqaYS98RUpEdadLrnkM=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/wrap-ansi/-/wrap-ansi-7.0.0.tgz}
+    engines: {node: '>=10'}
+
+  wrap-ansi@8.1.0:
+    resolution: {integrity: sha1-VtwiNo7lcPrOG0mBmXXZuaXq0hQ=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/wrap-ansi/-/wrap-ansi-8.1.0.tgz}
+    engines: {node: '>=12'}
+
+  wrappy@1.0.2:
+    resolution: {integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/wrappy/-/wrappy-1.0.2.tgz}
+
   ws@8.18.3:
     resolution: {integrity: sha1-tWuIq//eYnkcY5FwQAyT3LDJVHI=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/ws/-/ws-8.18.3.tgz}
     engines: {node: '>=10.0.0'}
@@ -1752,8 +2184,16 @@ packages:
   yallist@3.1.1:
     resolution: {integrity: sha1-27fa+b/YusmrRev2ArjLrQ1dCP0=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/yallist/-/yallist-3.1.1.tgz}
 
+  zod-to-json-schema@3.25.2:
+    resolution: {integrity: sha1-P6eZp7rdVUVBRy+2WEP9xGCy5ao=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/zod-to-json-schema/-/zod-to-json-schema-3.25.2.tgz}
+    peerDependencies:
+      zod: ^3.25.28 || ^4
+
   zod@3.25.76:
     resolution: {integrity: sha1-JoQcP2/SKmonYOfMtxkXl2hHHjQ=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/zod/-/zod-3.25.76.tgz}
+
+  zod@4.4.3:
+    resolution: {integrity: sha1-toDxcohdGLvr8hqDTqJeVaG781Y=, tarball: https://artifactory.dyn.ntnxdpro.com:443/artifactory/api/npm/canaveral-npm/zod/-/zod-4.4.3.tgz}
 
 snapshots:
 
@@ -1762,6 +2202,13 @@ snapshots:
       '@ai-sdk/provider': 3.0.9
       '@ai-sdk/provider-utils': 4.0.24(zod@3.25.76)
       '@vercel/oidc': 3.2.0
+      zod: 3.25.76
+
+  '@ai-sdk/mcp@1.0.42(zod@3.25.76)':
+    dependencies:
+      '@ai-sdk/provider': 3.0.10
+      '@ai-sdk/provider-utils': 4.0.27(zod@3.25.76)
+      pkce-challenge: 5.0.1
       zod: 3.25.76
 
   '@ai-sdk/openai@3.0.54(zod@3.25.76)':
@@ -1776,6 +2223,17 @@ snapshots:
       '@standard-schema/spec': 1.1.0
       eventsource-parser: 3.0.8
       zod: 3.25.76
+
+  '@ai-sdk/provider-utils@4.0.27(zod@3.25.76)':
+    dependencies:
+      '@ai-sdk/provider': 3.0.10
+      '@standard-schema/spec': 1.1.0
+      eventsource-parser: 3.0.8
+      zod: 3.25.76
+
+  '@ai-sdk/provider@3.0.10':
+    dependencies:
+      json-schema: 0.4.0
 
   '@ai-sdk/provider@3.0.9':
     dependencies:
@@ -1894,6 +2352,12 @@ snapshots:
     dependencies:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
+
+  '@cyanheads/git-mcp-server@2.15.1':
+    dependencies:
+      cross-spawn: 7.0.6
+      pino: 10.3.1
+      pino-pretty: 13.1.3
 
   '@esbuild/aix-ppc64@0.21.5':
     optional: true
@@ -2042,7 +2506,20 @@ snapshots:
   '@esbuild/win32-x64@0.27.7':
     optional: true
 
+  '@hono/node-server@1.19.14(hono@4.12.18)':
+    dependencies:
+      hono: 4.12.18
+
   '@ioredis/commands@1.5.1': {}
+
+  '@isaacs/cliui@8.0.2':
+    dependencies:
+      string-width: 5.1.2
+      string-width-cjs: string-width@4.2.3
+      strip-ansi: 7.2.0
+      strip-ansi-cjs: strip-ansi@6.0.1
+      wrap-ansi: 8.1.0
+      wrap-ansi-cjs: wrap-ansi@7.0.0
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
@@ -2062,6 +2539,62 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
+
+  '@modelcontextprotocol/sdk@1.29.0(zod@3.25.76)':
+    dependencies:
+      '@hono/node-server': 1.19.14(hono@4.12.18)
+      ajv: 8.20.0
+      ajv-formats: 3.0.1(ajv@8.20.0)
+      content-type: 1.0.5
+      cors: 2.8.6
+      cross-spawn: 7.0.6
+      eventsource: 3.0.7
+      eventsource-parser: 3.0.8
+      express: 5.2.1
+      express-rate-limit: 8.5.1(express@5.2.1)
+      hono: 4.12.18
+      jose: 6.2.3
+      json-schema-typed: 8.0.2
+      pkce-challenge: 5.0.1
+      raw-body: 3.0.2
+      zod: 3.25.76
+      zod-to-json-schema: 3.25.2(zod@3.25.76)
+    transitivePeerDependencies:
+      - supports-color
+
+  '@modelcontextprotocol/sdk@1.29.0(zod@4.4.3)':
+    dependencies:
+      '@hono/node-server': 1.19.14(hono@4.12.18)
+      ajv: 8.20.0
+      ajv-formats: 3.0.1(ajv@8.20.0)
+      content-type: 1.0.5
+      cors: 2.8.6
+      cross-spawn: 7.0.6
+      eventsource: 3.0.7
+      eventsource-parser: 3.0.8
+      express: 5.2.1
+      express-rate-limit: 8.5.1(express@5.2.1)
+      hono: 4.12.18
+      jose: 6.2.3
+      json-schema-typed: 8.0.2
+      pkce-challenge: 5.0.1
+      raw-body: 3.0.2
+      zod: 4.4.3
+      zod-to-json-schema: 3.25.2(zod@4.4.3)
+    transitivePeerDependencies:
+      - supports-color
+
+  '@modelcontextprotocol/server-filesystem@2026.1.14(zod@3.25.76)':
+    dependencies:
+      '@modelcontextprotocol/sdk': 1.29.0(zod@3.25.76)
+      diff: 5.2.2
+      glob: 10.5.0
+      minimatch: 10.2.5
+      zod-to-json-schema: 3.25.2(zod@3.25.76)
+    transitivePeerDependencies:
+      - '@cfworker/json-schema'
+      - supports-color
+      - zod
 
   '@msgpackr-extract/msgpackr-extract-darwin-arm64@3.0.3':
     optional: true
@@ -2094,6 +2627,11 @@ snapshots:
       fastq: 1.20.1
 
   '@opentelemetry/api@1.9.0': {}
+
+  '@pinojs/redact@0.4.0': {}
+
+  '@pkgjs/parseargs@0.11.0':
+    optional: true
 
   '@prisma/client@5.22.0(prisma@5.22.0)':
     optionalDependencies:
@@ -2330,6 +2868,11 @@ snapshots:
       mime-types: 2.1.35
       negotiator: 0.6.3
 
+  accepts@2.0.0:
+    dependencies:
+      mime-types: 3.0.2
+      negotiator: 1.0.0
+
   ai@6.0.169(zod@3.25.76):
     dependencies:
       '@ai-sdk/gateway': 3.0.105(zod@3.25.76)
@@ -2337,6 +2880,27 @@ snapshots:
       '@ai-sdk/provider-utils': 4.0.24(zod@3.25.76)
       '@opentelemetry/api': 1.9.0
       zod: 3.25.76
+
+  ajv-formats@3.0.1(ajv@8.20.0):
+    optionalDependencies:
+      ajv: 8.20.0
+
+  ajv@8.20.0:
+    dependencies:
+      fast-deep-equal: 3.1.3
+      fast-uri: 3.1.2
+      json-schema-traverse: 1.0.0
+      require-from-string: 2.0.2
+
+  ansi-regex@5.0.1: {}
+
+  ansi-regex@6.2.2: {}
+
+  ansi-styles@4.3.0:
+    dependencies:
+      color-convert: 2.0.1
+
+  ansi-styles@6.2.3: {}
 
   any-promise@1.3.0: {}
 
@@ -2349,6 +2913,8 @@ snapshots:
 
   array-flatten@1.1.1: {}
 
+  atomic-sleep@1.0.0: {}
+
   autoprefixer@10.5.0(postcss@8.5.12):
     dependencies:
       browserslist: 4.28.2
@@ -2357,6 +2923,10 @@ snapshots:
       picocolors: 1.1.1
       postcss: 8.5.12
       postcss-value-parser: 4.2.0
+
+  balanced-match@1.0.2: {}
+
+  balanced-match@4.0.4: {}
 
   base64id@2.0.0: {}
 
@@ -2380,6 +2950,28 @@ snapshots:
       unpipe: 1.0.0
     transitivePeerDependencies:
       - supports-color
+
+  body-parser@2.2.2:
+    dependencies:
+      bytes: 3.1.2
+      content-type: 1.0.5
+      debug: 4.4.3
+      http-errors: 2.0.1
+      iconv-lite: 0.7.2
+      on-finished: 2.4.1
+      qs: 6.15.1
+      raw-body: 3.0.2
+      type-is: 2.0.1
+    transitivePeerDependencies:
+      - supports-color
+
+  brace-expansion@2.1.0:
+    dependencies:
+      balanced-match: 1.0.2
+
+  brace-expansion@5.0.6:
+    dependencies:
+      balanced-match: 4.0.4
 
   braces@3.0.3:
     dependencies:
@@ -2434,17 +3026,29 @@ snapshots:
 
   cluster-key-slot@1.1.2: {}
 
+  color-convert@2.0.1:
+    dependencies:
+      color-name: 1.1.4
+
+  color-name@1.1.4: {}
+
+  colorette@2.0.20: {}
+
   commander@4.1.1: {}
 
   content-disposition@0.5.4:
     dependencies:
       safe-buffer: 5.2.1
 
+  content-disposition@1.1.0: {}
+
   content-type@1.0.5: {}
 
   convert-source-map@2.0.0: {}
 
   cookie-signature@1.0.7: {}
+
+  cookie-signature@1.2.2: {}
 
   cookie@0.7.2: {}
 
@@ -2457,9 +3061,17 @@ snapshots:
     dependencies:
       luxon: 3.7.2
 
+  cross-spawn@7.0.6:
+    dependencies:
+      path-key: 3.1.1
+      shebang-command: 2.0.0
+      which: 2.0.2
+
   cssesc@3.0.0: {}
 
   csstype@3.2.3: {}
+
+  dateformat@4.6.3: {}
 
   debug@2.6.9:
     dependencies:
@@ -2480,6 +3092,8 @@ snapshots:
 
   didyoumean@1.2.2: {}
 
+  diff@5.2.2: {}
+
   dlv@1.1.3: {}
 
   dotenv@16.6.1: {}
@@ -2490,11 +3104,21 @@ snapshots:
       es-errors: 1.3.0
       gopd: 1.2.0
 
+  eastasianwidth@0.2.0: {}
+
   ee-first@1.1.1: {}
 
   electron-to-chromium@1.5.344: {}
 
+  emoji-regex@8.0.0: {}
+
+  emoji-regex@9.2.2: {}
+
   encodeurl@2.0.0: {}
+
+  end-of-stream@1.4.5:
+    dependencies:
+      once: 1.4.0
 
   engine.io-client@6.6.4:
     dependencies:
@@ -2598,6 +3222,15 @@ snapshots:
 
   eventsource-parser@3.0.8: {}
 
+  eventsource@3.0.7:
+    dependencies:
+      eventsource-parser: 3.0.8
+
+  express-rate-limit@8.5.1(express@5.2.1):
+    dependencies:
+      express: 5.2.1
+      ip-address: 10.2.0
+
   express@4.22.1:
     dependencies:
       accepts: 1.3.8
@@ -2634,6 +3267,43 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  express@5.2.1:
+    dependencies:
+      accepts: 2.0.0
+      body-parser: 2.2.2
+      content-disposition: 1.1.0
+      content-type: 1.0.5
+      cookie: 0.7.2
+      cookie-signature: 1.2.2
+      debug: 4.4.3
+      depd: 2.0.0
+      encodeurl: 2.0.0
+      escape-html: 1.0.3
+      etag: 1.8.1
+      finalhandler: 2.1.1
+      fresh: 2.0.0
+      http-errors: 2.0.1
+      merge-descriptors: 2.0.0
+      mime-types: 3.0.2
+      on-finished: 2.4.1
+      once: 1.4.0
+      parseurl: 1.3.3
+      proxy-addr: 2.0.7
+      qs: 6.15.1
+      range-parser: 1.2.1
+      router: 2.2.0
+      send: 1.2.1
+      serve-static: 2.2.1
+      statuses: 2.0.2
+      type-is: 2.0.1
+      vary: 1.1.2
+    transitivePeerDependencies:
+      - supports-color
+
+  fast-copy@4.0.3: {}
+
+  fast-deep-equal@3.1.3: {}
+
   fast-glob@3.3.3:
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -2641,6 +3311,10 @@ snapshots:
       glob-parent: 5.1.2
       merge2: 1.4.1
       micromatch: 4.0.8
+
+  fast-safe-stringify@2.1.1: {}
+
+  fast-uri@3.1.2: {}
 
   fastq@1.20.1:
     dependencies:
@@ -2666,11 +3340,29 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  finalhandler@2.1.1:
+    dependencies:
+      debug: 4.4.3
+      encodeurl: 2.0.0
+      escape-html: 1.0.3
+      on-finished: 2.4.1
+      parseurl: 1.3.3
+      statuses: 2.0.2
+    transitivePeerDependencies:
+      - supports-color
+
+  foreground-child@3.3.1:
+    dependencies:
+      cross-spawn: 7.0.6
+      signal-exit: 4.1.0
+
   forwarded@0.2.0: {}
 
   fraction.js@5.3.4: {}
 
   fresh@0.5.2: {}
+
+  fresh@2.0.0: {}
 
   fsevents@2.3.3:
     optional: true
@@ -2709,6 +3401,15 @@ snapshots:
     dependencies:
       is-glob: 4.0.3
 
+  glob@10.5.0:
+    dependencies:
+      foreground-child: 3.3.1
+      jackspeak: 3.4.3
+      minimatch: 9.0.9
+      minipass: 7.1.3
+      package-json-from-dist: 1.0.1
+      path-scurry: 1.11.1
+
   gopd@1.2.0: {}
 
   has-symbols@1.1.0: {}
@@ -2716,6 +3417,10 @@ snapshots:
   hasown@2.0.3:
     dependencies:
       function-bind: 1.1.2
+
+  help-me@5.0.0: {}
+
+  hono@4.12.18: {}
 
   http-errors@2.0.1:
     dependencies:
@@ -2726,6 +3431,10 @@ snapshots:
       toidentifier: 1.0.1
 
   iconv-lite@0.4.24:
+    dependencies:
+      safer-buffer: 2.1.2
+
+  iconv-lite@0.7.2:
     dependencies:
       safer-buffer: 2.1.2
 
@@ -2745,6 +3454,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  ip-address@10.2.0: {}
+
   ipaddr.js@1.9.1: {}
 
   is-binary-path@2.1.0:
@@ -2757,17 +3468,37 @@ snapshots:
 
   is-extglob@2.1.1: {}
 
+  is-fullwidth-code-point@3.0.0: {}
+
   is-glob@4.0.3:
     dependencies:
       is-extglob: 2.1.1
 
   is-number@7.0.0: {}
 
+  is-promise@4.0.0: {}
+
+  isexe@2.0.0: {}
+
+  jackspeak@3.4.3:
+    dependencies:
+      '@isaacs/cliui': 8.0.2
+    optionalDependencies:
+      '@pkgjs/parseargs': 0.11.0
+
   jiti@1.21.7: {}
+
+  jose@6.2.3: {}
+
+  joycon@3.1.1: {}
 
   js-tokens@4.0.0: {}
 
   jsesc@3.1.0: {}
+
+  json-schema-traverse@1.0.0: {}
+
+  json-schema-typed@8.0.2: {}
 
   json-schema@0.4.0: {}
 
@@ -2785,6 +3516,8 @@ snapshots:
     dependencies:
       js-tokens: 4.0.0
 
+  lru-cache@10.4.3: {}
+
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
@@ -2793,9 +3526,25 @@ snapshots:
 
   math-intrinsics@1.1.0: {}
 
+  mcp-macos@2.1.5(typescript@5.9.3):
+    dependencies:
+      '@modelcontextprotocol/sdk': 1.29.0(zod@4.4.3)
+      express: 5.2.1
+      express-rate-limit: 8.5.1(express@5.2.1)
+      jose: 6.2.3
+      typescript: 5.9.3
+      zod: 4.4.3
+    transitivePeerDependencies:
+      - '@cfworker/json-schema'
+      - supports-color
+
   media-typer@0.3.0: {}
 
+  media-typer@1.1.0: {}
+
   merge-descriptors@1.0.3: {}
+
+  merge-descriptors@2.0.0: {}
 
   merge2@1.4.1: {}
 
@@ -2808,11 +3557,29 @@ snapshots:
 
   mime-db@1.52.0: {}
 
+  mime-db@1.54.0: {}
+
   mime-types@2.1.35:
     dependencies:
       mime-db: 1.52.0
 
+  mime-types@3.0.2:
+    dependencies:
+      mime-db: 1.54.0
+
   mime@1.6.0: {}
+
+  minimatch@10.2.5:
+    dependencies:
+      brace-expansion: 5.0.6
+
+  minimatch@9.0.9:
+    dependencies:
+      brace-expansion: 2.1.0
+
+  minimist@1.2.8: {}
+
+  minipass@7.1.3: {}
 
   ms@2.0.0: {}
 
@@ -2844,6 +3611,8 @@ snapshots:
 
   negotiator@0.6.3: {}
 
+  negotiator@1.0.0: {}
+
   node-abort-controller@3.1.1: {}
 
   node-gyp-build-optional-packages@5.2.2:
@@ -2861,15 +3630,32 @@ snapshots:
 
   object-inspect@1.13.4: {}
 
+  on-exit-leak-free@2.1.2: {}
+
   on-finished@2.4.1:
     dependencies:
       ee-first: 1.1.1
 
+  once@1.4.0:
+    dependencies:
+      wrappy: 1.0.2
+
+  package-json-from-dist@1.0.1: {}
+
   parseurl@1.3.3: {}
+
+  path-key@3.1.1: {}
 
   path-parse@1.0.7: {}
 
+  path-scurry@1.11.1:
+    dependencies:
+      lru-cache: 10.4.3
+      minipass: 7.1.3
+
   path-to-regexp@0.1.13: {}
+
+  path-to-regexp@8.4.2: {}
 
   picocolors@1.1.1: {}
 
@@ -2879,7 +3665,45 @@ snapshots:
 
   pify@2.3.0: {}
 
+  pino-abstract-transport@3.0.0:
+    dependencies:
+      split2: 4.2.0
+
+  pino-pretty@13.1.3:
+    dependencies:
+      colorette: 2.0.20
+      dateformat: 4.6.3
+      fast-copy: 4.0.3
+      fast-safe-stringify: 2.1.1
+      help-me: 5.0.0
+      joycon: 3.1.1
+      minimist: 1.2.8
+      on-exit-leak-free: 2.1.2
+      pino-abstract-transport: 3.0.0
+      pump: 3.0.4
+      secure-json-parse: 4.1.0
+      sonic-boom: 4.2.1
+      strip-json-comments: 5.0.3
+
+  pino-std-serializers@7.1.0: {}
+
+  pino@10.3.1:
+    dependencies:
+      '@pinojs/redact': 0.4.0
+      atomic-sleep: 1.0.0
+      on-exit-leak-free: 2.1.2
+      pino-abstract-transport: 3.0.0
+      pino-std-serializers: 7.1.0
+      process-warning: 5.0.0
+      quick-format-unescaped: 4.0.4
+      real-require: 0.2.0
+      safe-stable-stringify: 2.5.0
+      sonic-boom: 4.2.1
+      thread-stream: 4.1.0
+
   pirates@4.0.7: {}
+
+  pkce-challenge@5.0.1: {}
 
   postcss-import@15.1.0(postcss@8.5.12):
     dependencies:
@@ -2925,10 +3749,17 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
+  process-warning@5.0.0: {}
+
   proxy-addr@2.0.7:
     dependencies:
       forwarded: 0.2.0
       ipaddr.js: 1.9.1
+
+  pump@3.0.4:
+    dependencies:
+      end-of-stream: 1.4.5
+      once: 1.4.0
 
   qs@6.14.2:
     dependencies:
@@ -2940,6 +3771,8 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
+  quick-format-unescaped@4.0.4: {}
+
   range-parser@1.2.1: {}
 
   raw-body@2.5.3:
@@ -2947,6 +3780,13 @@ snapshots:
       bytes: 3.1.2
       http-errors: 2.0.1
       iconv-lite: 0.4.24
+      unpipe: 1.0.0
+
+  raw-body@3.0.2:
+    dependencies:
+      bytes: 3.1.2
+      http-errors: 2.0.1
+      iconv-lite: 0.7.2
       unpipe: 1.0.0
 
   react-dom@18.3.1(react@18.3.1):
@@ -2969,11 +3809,17 @@ snapshots:
     dependencies:
       picomatch: 2.3.2
 
+  real-require@0.2.0: {}
+
+  real-require@1.0.0: {}
+
   redis-errors@1.2.0: {}
 
   redis-parser@3.0.0:
     dependencies:
       redis-errors: 1.2.0
+
+  require-from-string@2.0.2: {}
 
   resolve-pkg-maps@1.0.0: {}
 
@@ -3017,17 +3863,31 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.60.2
       fsevents: 2.3.3
 
+  router@2.2.0:
+    dependencies:
+      debug: 4.4.3
+      depd: 2.0.0
+      is-promise: 4.0.0
+      parseurl: 1.3.3
+      path-to-regexp: 8.4.2
+    transitivePeerDependencies:
+      - supports-color
+
   run-parallel@1.2.0:
     dependencies:
       queue-microtask: 1.2.3
 
   safe-buffer@5.2.1: {}
 
+  safe-stable-stringify@2.5.0: {}
+
   safer-buffer@2.1.2: {}
 
   scheduler@0.23.2:
     dependencies:
       loose-envify: 1.4.0
+
+  secure-json-parse@4.1.0: {}
 
   semver@6.3.1: {}
 
@@ -3051,6 +3911,22 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  send@1.2.1:
+    dependencies:
+      debug: 4.4.3
+      encodeurl: 2.0.0
+      escape-html: 1.0.3
+      etag: 1.8.1
+      fresh: 2.0.0
+      http-errors: 2.0.1
+      mime-types: 3.0.2
+      ms: 2.1.3
+      on-finished: 2.4.1
+      range-parser: 1.2.1
+      statuses: 2.0.2
+    transitivePeerDependencies:
+      - supports-color
+
   serve-static@1.16.3:
     dependencies:
       encodeurl: 2.0.0
@@ -3060,7 +3936,22 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  serve-static@2.2.1:
+    dependencies:
+      encodeurl: 2.0.0
+      escape-html: 1.0.3
+      parseurl: 1.3.3
+      send: 1.2.1
+    transitivePeerDependencies:
+      - supports-color
+
   setprototypeof@1.2.0: {}
+
+  shebang-command@2.0.0:
+    dependencies:
+      shebang-regex: 3.0.0
+
+  shebang-regex@3.0.0: {}
 
   side-channel-list@1.0.1:
     dependencies:
@@ -3089,6 +3980,8 @@ snapshots:
       side-channel-list: 1.0.1
       side-channel-map: 1.0.1
       side-channel-weakmap: 1.0.2
+
+  signal-exit@4.1.0: {}
 
   socket.io-adapter@2.5.6:
     dependencies:
@@ -3131,11 +4024,39 @@ snapshots:
       - supports-color
       - utf-8-validate
 
+  sonic-boom@4.2.1:
+    dependencies:
+      atomic-sleep: 1.0.0
+
   source-map-js@1.2.1: {}
+
+  split2@4.2.0: {}
 
   standard-as-callback@2.1.0: {}
 
   statuses@2.0.2: {}
+
+  string-width@4.2.3:
+    dependencies:
+      emoji-regex: 8.0.0
+      is-fullwidth-code-point: 3.0.0
+      strip-ansi: 6.0.1
+
+  string-width@5.1.2:
+    dependencies:
+      eastasianwidth: 0.2.0
+      emoji-regex: 9.2.2
+      strip-ansi: 7.2.0
+
+  strip-ansi@6.0.1:
+    dependencies:
+      ansi-regex: 5.0.1
+
+  strip-ansi@7.2.0:
+    dependencies:
+      ansi-regex: 6.2.2
+
+  strip-json-comments@5.0.3: {}
 
   sucrase@3.35.1:
     dependencies:
@@ -3185,6 +4106,10 @@ snapshots:
     dependencies:
       any-promise: 1.3.0
 
+  thread-stream@4.1.0:
+    dependencies:
+      real-require: 1.0.0
+
   tinyglobby@0.2.16:
     dependencies:
       fdir: 6.5.0(picomatch@4.0.4)
@@ -3221,6 +4146,12 @@ snapshots:
       media-typer: 0.3.0
       mime-types: 2.1.35
 
+  type-is@2.0.1:
+    dependencies:
+      content-type: 1.0.5
+      media-typer: 1.1.0
+      mime-types: 3.0.2
+
   typescript@5.9.3: {}
 
   undici-types@6.21.0: {}
@@ -3248,10 +4179,38 @@ snapshots:
       '@types/node': 22.19.17
       fsevents: 2.3.3
 
+  which@2.0.2:
+    dependencies:
+      isexe: 2.0.0
+
+  wrap-ansi@7.0.0:
+    dependencies:
+      ansi-styles: 4.3.0
+      string-width: 4.2.3
+      strip-ansi: 6.0.1
+
+  wrap-ansi@8.1.0:
+    dependencies:
+      ansi-styles: 6.2.3
+      string-width: 5.1.2
+      strip-ansi: 7.2.0
+
+  wrappy@1.0.2: {}
+
   ws@8.18.3: {}
 
   xmlhttprequest-ssl@2.1.2: {}
 
   yallist@3.1.1: {}
 
+  zod-to-json-schema@3.25.2(zod@3.25.76):
+    dependencies:
+      zod: 3.25.76
+
+  zod-to-json-schema@3.25.2(zod@4.4.3):
+    dependencies:
+      zod: 4.4.3
+
   zod@3.25.76: {}
+
+  zod@4.4.3: {}

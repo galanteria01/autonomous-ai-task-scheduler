@@ -17,9 +17,5 @@ export const taskQueue = new Queue<TaskJobPayload>(TASK_QUEUE_NAME, {
 });
 
 export async function enqueueTask(taskId: string) {
-  await taskQueue.add(
-    TASK_JOB_NAME,
-    { taskId },
-    { jobId: taskId },
-  );
+  await taskQueue.add(TASK_JOB_NAME, { taskId });
 }

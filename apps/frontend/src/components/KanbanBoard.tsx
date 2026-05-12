@@ -4,7 +4,7 @@ import { listTasks } from "../api/tasks";
 import { useTaskSocket } from "../hooks/useSocket";
 import { KanbanColumn } from "./KanbanColumn";
 
-const VISIBLE_COLUMNS: TaskStatus[] = ["todo", "in_progress", "done"];
+const VISIBLE_COLUMNS: TaskStatus[] = ["todo", "in_progress", "done", "failed"];
 
 export function KanbanBoard() {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -27,7 +27,16 @@ export function KanbanBoard() {
     });
   }, []);
 
-  useTaskSocket(useMemo(() => ({ onCreated: upsert, onUpdated: upsert }), [upsert]));
+  const remove = useCallback((payload: { id: string }) => {
+    setTasks((prev) => prev.filter((t) => t.id !== payload.id));
+  }, []);
+
+  useTaskSocket(
+    useMemo(
+      () => ({ onCreated: upsert, onUpdated: upsert, onDeleted: remove }),
+      [upsert, remove],
+    ),
+  );
 
   const grouped = useMemo(() => {
     const map: Record<TaskStatus, Task[]> = {
@@ -37,8 +46,7 @@ export function KanbanBoard() {
       failed: [],
     };
     for (const t of tasks) {
-      const bucket = t.status === "failed" ? "done" : t.status;
-      map[bucket].push(t);
+      map[t.status].push(t);
     }
     return map;
   }, [tasks]);
@@ -52,7 +60,7 @@ export function KanbanBoard() {
   }
 
   return (
-    <div className="grid h-full grid-cols-1 gap-4 md:grid-cols-3">
+    <div className="grid h-full grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
       {VISIBLE_COLUMNS.map((status) => (
         <KanbanColumn key={status} status={status} tasks={grouped[status]} />
       ))}

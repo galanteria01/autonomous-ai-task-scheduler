@@ -90,12 +90,13 @@ parallel. Open http://localhost:5173.
 
 ## REST API
 
-| Method | Path           | Body                                      | Notes                                |
-| ------ | -------------- | ----------------------------------------- | ------------------------------------ |
-| `GET`  | `/tasks`       | —                                         | Lists all tasks                      |
-| `POST` | `/tasks`       | `{ title, description, type }`            | Creates task and enqueues a job      |
-| `PATCH`| `/tasks/:id`   | `{ status?, output? }`                    | Used by the worker to report status  |
-| `GET`  | `/health`      | —                                         | Health check                         |
+| Method | Path                | Body                                 | Notes                                                |
+| ------ | ------------------- | ------------------------------------ | ---------------------------------------------------- |
+| `GET`  | `/tasks`            | —                                    | Lists all tasks                                      |
+| `POST` | `/tasks`            | `{ title, description, type }`       | Creates task and enqueues a job                      |
+| `PATCH`| `/tasks/:id`        | `{ status?, output? }`               | Used by the worker to report status                  |
+| `POST` | `/tasks/:id/retry`  | —                                    | Resets a failed task to `todo` and re-enqueues a job |
+| `GET`  | `/health`           | —                                    | Health check                                         |
 
 WebSocket events (Socket.IO): `task:created`, `task:updated`.
 
@@ -112,9 +113,29 @@ interface Task {
   type: TaskType;
   status: TaskStatus;
   output: string | null;
+  metadata: TaskMetadata | null;
   createdAt: string;
+  updatedAt: string;
+}
+
+interface TaskMetadata {
+  model?: string;            // e.g. "gpt-4o-mini"
+  steps?: number;            // generateText steps consumed
+  durationMs?: number;       // wall-clock execution time
+  startedAt?: string;
+  finishedAt?: string;
+  attempts?: number;         // 1-based attempt count
+  toolCalls?: ToolCallLog[]; // ordered timeline of tool invocations
+  usage?: { inputTokens?: number; outputTokens?: number; totalTokens?: number };
+  finishReason?: string;     // "stop" | "tool-calls" | "length" | ...
+  error?: { message: string; name?: string };
 }
 ```
+
+The `metadata` JSON column is set by the worker on every status transition, so
+the **Done** column shows tool timeline + token usage + duration, and the
+**Failed** column shows the error plus any partial tool calls that ran before
+the failure. Click "Run details" on a card to expand.
 
 ## Agent + tools
 

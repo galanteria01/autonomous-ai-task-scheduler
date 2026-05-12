@@ -30,3 +30,7 @@ export function emitTaskCreated(task: Task) {
 export function emitTaskUpdated(task: Task) {
   getIO().emit(SOCKET_EVENTS.TASK_UPDATED, task);
 }
+
+export function emitTaskDeleted(taskId: string) {
+  getIO().emit(SOCKET_EVENTS.TASK_DELETED, { id: taskId });
+}

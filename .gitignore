@@ -10,3 +10,4 @@ build
 coverage
 
 apps/backend/prisma/migrations/dev.db*
+.pnpm-store/

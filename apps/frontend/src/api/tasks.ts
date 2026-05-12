@@ -11,6 +11,7 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
   if (!res.ok) {
     throw new Error(`${res.status} ${res.statusText}`);
   }
+  if (res.status === 204) return undefined as T;
   return (await res.json()) as T;
 }
 
@@ -23,4 +24,16 @@ export function createTask(input: CreateTaskInput) {
     method: "POST",
     body: JSON.stringify(input),
   });
+}
+
+export function retryTask(id: string) {
+  return request<Task>(`/tasks/${id}/retry`, { method: "POST" });
+}
+
+export function rerunTask(id: string) {
+  return retryTask(id);
+}
+
+export function deleteTask(id: string) {
+  return request<void>(`/tasks/${id}`, { method: "DELETE" });
 }
