@@ -16,7 +16,59 @@ Backend (Express + Prisma) ──┴── Socket.IO server
    ▼                         │ HTTP PATCH /tasks/:id
 Postgres   BullMQ ──► Redis ─┴── Worker (BullMQ + Vercel AI SDK)
                                   └── tools: fetch_url, summarize, run_js
+                                  └── optional MCP servers (mac / code)
 ```
+
+### End-to-end workflow
+
+```mermaid
+flowchart LR
+  user([User])
+
+  subgraph FE [Frontend]
+    ui[Kanban Board UI]
+  end
+
+  subgraph BE [Backend]
+    api[Express REST<br/>/tasks routes]
+    sock[Socket.IO server]
+    db[(Postgres<br/>via Prisma)]
+    queue[(Redis<br/>BullMQ)]
+  end
+
+  subgraph WK [Worker process]
+    bull[BullMQ Worker]
+    agent[Vercel AI SDK<br/>generateText loop<br/>per-step timeout]
+    builtin[Built-in tools<br/>fetch_url / summarize / run_js]
+    mac[mcp-macos<br/>Notes · Calendar · Reminders ·<br/>Mail · Messages · Contacts]
+    code[FS + git MCP servers<br/>read · edit · diff · status · ...]
+    llm{{LLM<br/>OpenAI-compatible<br/>endpoint}}
+  end
+
+  user -- "Create / right-click<br/>(rerun · delete)" --> ui
+  ui -- "POST /tasks<br/>POST /tasks/:id/retry<br/>DELETE /tasks/:id" --> api
+  api --> db
+  api -- "enqueue jobId=taskId" --> queue
+  api -- "task:created<br/>task:updated<br/>task:deleted" --> sock
+  sock -. "WebSocket push" .-> ui
+
+  queue -- "BullMQ job" --> bull
+  bull -- "PATCH status=in_progress" --> api
+  bull --> agent
+  agent --> builtin
+  agent -- "task.type == mac_action" --> mac
+  agent -- "task.type == code" --> code
+  agent <-- "chat/completions" --> llm
+
+  agent -- "step results<br/>(tool calls, usage)" --> bull
+  bull -- "PATCH status=done | failed<br/>output + metadata" --> api
+  api -- "emit task:updated" --> sock
+
+  classDef gated stroke-dasharray: 4 4,stroke:#888;
+  class mac,code gated;
+```
+
+The dashed boxes (`mcp-macos`, FS + git MCP servers) are **optional and gated by task type**: they're only exposed to the agent when `task.type` matches `MAC_TOOLS_TASK_TYPE` or `CODE_TASK_TYPE` respectively, so a `summarize` task can never reach AppleScript or your filesystem.
 
 ## Tech stack
 
